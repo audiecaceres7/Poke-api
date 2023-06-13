@@ -2,12 +2,80 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="./src/main.ts"></script>
+    <title>Document</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <img id="poke-ball" src="./images/pokebola-go-1.png" alt="pokeball" />
+    <header>
+      <nav class="nav-bar">
+        <div>
+          <img
+            id="logo"
+            src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
+            alt="pokeapi"
+          />
+        </div>
+        <div class="nav-item-container">
+          <ul class="nav-items">
+            <a class="box is-active" data-switcher data-tab="1">
+              <h2>Collection</h2>
+            </a>
+            <a class="box" data-switcher data-tab="2">
+              <h2>Favorites</h2>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="container is-active" data-page="1">
+      <div class="container-header">
+        <div class="section-header">
+          <h3>Collection</h3>
+        </div>
+        <div class="value-container">
+          <div class="toggle-container">
+            <button class="atoz sort-btn">Sort A - Z</button>
+            <button class="ztoa sort-btn">Sort Z - A</button>
+          </div>
+          <div class="types-container">
+            <div class="type-header">
+              <h2>Types 🧬</h2>
+            </div>
+            <div class="type-info">
+              <!--types go here!-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collection-container" id="collection"></div>
+    </section>
+    <section class="container" data-page="2">
+      <div class="container-header">
+        <div class="section-header">
+          <h3>My favorites</h3>
+        </div>
+        <div class="value-container">
+          <div class="toggle-container">
+            <button class="atoz sort-btn">Sort A - Z</button>
+            <button class="ztoa sort-btn">Sort Z - A</button>
+          </div>
+        </div>
+      </div>
+      <div class="favorites-container" id="favorites"></div>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/3c61ba1994.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
